@@ -1,4 +1,4 @@
-import { api } from "./api.js";
+import { api } from "./data/api.js";
 
 async function getMovies() {
   const movies = await api();
@@ -10,9 +10,11 @@ function displayMovies(movies) {
     const container = document.querySelector(".container");
 
     const card = document.createElement("div");
-    card.innerHTML = `<h3>${movie.title}</h3>`;
+    card.className = "card";
+    // card.innerHTML = `<h3>${movie.title}</h3>`;
 
     const poster = document.createElement("img");
+    poster.className = "poster";
     poster.src = `${posterMovie(movie.poster_path)}`;
 
     card.appendChild(poster);

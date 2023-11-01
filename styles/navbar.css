@@ -1,0 +1,24 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #032541;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.nav {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.logo {
+  width: 154px;
+  height: 20px;
+}
+
+.search {
+  text-align: right;
+}
