@@ -4,19 +4,12 @@
   display: flex;
 }
 
-.inputSearch {
-  width: 11rem;
-  height: 2.3rem;
-  padding: 0;
-  border: none;
-  border-radius: 25px 0px 0px 25px;
-  padding-left: 1rem;
-}
-
 .btnSearch {
-  width: 3rem;
-  height: 2.3rem;
+  position: absolute;
+  width: 5%;
+  height: 45%;
   padding: 0;
+  right: 2%;
   border: none;
   border-radius: 0px 25px 25px 0px;
   background-color: #0b91b3;
@@ -26,9 +19,16 @@
   cursor: pointer;
 }
 
-.iconSearch:hover {
-  transform: scale(120%);
-  transition: 0.3s;
+.inputSearch {
+  position: absolute;
+  width: 20%;
+  height: 45%;
+  padding: 0;
+  right: 7%;
+  border: none;
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 1rem;
+  font-size: large;
 }
 
 .iconSearch {
@@ -39,18 +39,17 @@
   /* ELEMENTOS AL DEJAR DE INTERACTUAR CON ELLOS */
   .search:not(:hover) {
     .btnSearch {
-      position: absolute;
       border-radius: 25px;
-      width: 25%;
+      width: 30%;
+      height: 45%;
       transition: 0.5s;
     }
     .inputSearch {
-      position: absolute;
-      width: 0rem;
+      width: 0px;
       height: 2.2rem;
       border: none;
-      border-radius: 0px 25px 25px 0px;
-      left: 80%;
+      border-radius: 0px px 25px 0px;
+      left: 73%;
       transition: 0.5s;
     }
   }
@@ -58,7 +57,6 @@
   /* ELEMENTOS AL INTERACTUAR CON ELLOS */
   .search:hover {
     .inputSearch {
-      position: absolute;
       width: 80%;
       left: 0;
       height: 60%;
@@ -68,7 +66,6 @@
       transition: 0.5s;
     }
     .btnSearch {
-      position: absolute;
       width: 20%;
       right: 0%;
       height: 60%;
