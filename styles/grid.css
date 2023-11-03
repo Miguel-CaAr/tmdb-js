@@ -3,7 +3,7 @@ body {
   padding: 0;
 }
 
-.container {
+.listMovies {
   margin-top: 1.2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, 10rem);
