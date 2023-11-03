@@ -33,6 +33,10 @@
   transition: 0.5s;
 }
 
+.inputSearch:focus{
+  outline: none;
+}
+
 .iconSearch {
   width: 1.5rem;
 }
