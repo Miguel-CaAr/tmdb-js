@@ -1,4 +1,4 @@
-const API = "https://api.themoviedb.org/3/movie/popular";
+const API = "https://api.themoviedb.org/3/movie/";
 const OPTIONS = {
   method: "GET",
   headers: {
@@ -9,11 +9,12 @@ const OPTIONS = {
 };
 /**
  * Consumo de la API
- * @returns Retorna la respuesta convertida a JSON
+ * @param {string} path segmento en la ruta
+ * @returns Estructura de datos (JSON) con el conjunto de peliculas
  */
-export async function api() {
+export async function api(path) {
   try {
-    const response = await fetch(API, OPTIONS);
+    const response = await fetch(API + path, OPTIONS);
     return await response.json();
   } catch (error) {
     return await alert(`Lo sentimos, hay un error:\n${error}`);
