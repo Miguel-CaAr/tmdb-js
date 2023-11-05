@@ -24,7 +24,7 @@
   font-size: 3rem;
   background-color: #0b91b3;
   border: none;
-  box-shadow: 0rem 0.5rem 0.8rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0rem 0rem 1rem black;
   transition: 0.5s;
 }
 
