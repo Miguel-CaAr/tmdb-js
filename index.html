@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Movie DB</title>
-    <link rel="shortcut icon" href="./assets/logo smrt.svg">
+    <link rel="shortcut icon" href="./assets/logo smrt.svg" />
     <link rel="stylesheet" href="./styles/grid.css" />
-    <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/movie.css" />
-    <link rel="stylesheet" href="./styles/search.css" />
+    <link rel="stylesheet" href="./styles/navbar/navbar.css" />
+    <link rel="stylesheet" href="./styles/navbar/search.css" />
+    <link rel="stylesheet" href="./styles/options.css" />
   </head>
+
   <body>
     <header>
       <nav class="nav">
@@ -31,22 +33,25 @@
               alt="icono de buscar"
             />
           </button>
-        </div>
+        </form>
       </nav>
     </header>
     <main>
       <!-- CONTENEDOR DE PELICULAS ESTRENO-->
       <section>
-        <h1 class="titlesSection">ESTRENO 🍿
-        </h1>
+        <h1 class="titlesSection">ESTRENO 🍿</h1>
         <ul class="premiereMovies grid"></ul>
       </section>
       <!-- CONTENEDOR DE PELICULAS POR SALIR -->
       <section>
-        <h1 class="titlesSection">POR SALIR 🍿
-        </h1>
+        <h1 class="titlesSection">POR SALIR 🍿</h1>
         <ul class="upcomingMovies grid"></ul>
       </section>
+      <!-- OPCIONES -->
+      <div class="containerOptions">
+        <button class="options">+</button>
+        <button class="btnFav">⭐Favoritas</button>
+      </div>
     </main>
     <footer>
       <script type="module" src="app.js"></script>
