@@ -4,6 +4,7 @@
   display: flex;
 }
 
+/* PC */
 .btnSearch {
   position: absolute;
   width: 5%;
@@ -33,7 +34,7 @@
   transition: 0.5s;
 }
 
-.inputSearch:focus{
+.inputSearch:focus {
   outline: none;
 }
 
@@ -41,6 +42,25 @@
   width: 1.5rem;
 }
 
+/* ANIMACION */
+@media (width > 750px) {
+  .inputSearch:focus {
+    z-index: 10;
+    width: 25%;
+    right: 2%;
+    border-radius: 25px;
+  }
+
+  .inputSearch:not(:focus) {
+    z-index: 10;
+    width: 20%;
+    border-radius: 7%;
+    border-radius: 25px 0px 0px 25px;
+    transition: 0.5;
+  }
+}
+
+/* MOVIL */
 @media (width < 750px) {
   /* ELEMENTOS AL DEJAR DE INTERACTUAR CON ELLOS */
   .search:not(:hover) {
