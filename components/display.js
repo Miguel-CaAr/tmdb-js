@@ -23,7 +23,7 @@ export function displayMovies(movies, contenedor) {
     const rating = document.createElement("div");
     const percent = document.createElement("span");
     rating.className = "rating"; //contenedor
-    percent.className = "numRating"; //numero
+    percent.className = "percent"; //numero
     percent.innerHTML = `${(movie.vote_average * 10).toFixed(0)}%`; //.toFixed() metodo para formatear un numero con una cantidad de digitos decimales y redondea
 
     rating.appendChild(percent);
