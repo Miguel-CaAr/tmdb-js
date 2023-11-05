@@ -20,10 +20,13 @@ export function displayMovies(movies, contenedor) {
     poster.src = `${posterMovie(movie.poster_path)}`;
 
     //Se agrega el rating a cada movie.
-    const rating = document.createElement("span");
-    rating.className = "rating";
-    rating.innerHTML = movie.vote_average.toFixed(1); //.toFixed() metodo para formatear un numero con una cantidad de digitos decimales y redondea
+    const rating = document.createElement("div");
+    const percent = document.createElement("span");
+    rating.className = "rating"; //contenedor
+    percent.className = "numRating"; //numero
+    percent.innerHTML = `${(movie.vote_average * 10).toFixed(0)}%`; //.toFixed() metodo para formatear un numero con una cantidad de digitos decimales y redondea
 
+    rating.appendChild(percent);
     card.appendChild(rating);
     card.appendChild(poster);
     container.appendChild(card);
