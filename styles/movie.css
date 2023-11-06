@@ -5,16 +5,15 @@
 
 .card:hover {
   .poster {
-    transform: scale(110%);
+    transform: scale(104%);
     transition: 0.3s;
     cursor: pointer;
   }
   .rating{
-    z-index: 10;
-    transform: scale(110%);
+    transform: scale(104%);
     transition: 0.3s;
-    bottom: 95%;
-    left: 90%;
+    bottom: 93%;
+    left: 87%;
   }
 }
 
@@ -23,11 +22,13 @@
   border-radius: 5%;
   height: 100%;
   width: 100%;
+  transition: 0.5s;
 }
 
 /* CONTENEDOR DEL RATING */
 .rating {
   position: absolute;
+  z-index: 9;
   width: 2rem;
   height: 2rem;
   bottom: 90%;
@@ -39,6 +40,7 @@
   justify-content: center;
   box-shadow: inset 0rem 0rem 0.3rem black;
   font-size: small;
+  transition: 0.5s;
 }
 
 /* PORCENTAJE DEL RATING */

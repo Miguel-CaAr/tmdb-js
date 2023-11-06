@@ -1,5 +1,6 @@
 .containerOptions {
   position: fixed;
+  z-index: 10;
   right: 3%;
   bottom: 3%;
   width: 4.5rem;
