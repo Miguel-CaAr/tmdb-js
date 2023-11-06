@@ -1,11 +1,61 @@
+/* CONTENEDOR DE LA PELICULA */
+.card {
+  position: relative;
+}
+
+.card:hover {
+  .poster {
+    transform: scale(110%);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  .rating{
+    z-index: 10;
+    transform: scale(110%);
+    transition: 0.3s;
+    bottom: 95%;
+    left: 90%;
+  }
+}
+
+/* IMAGEN POSTES DE LA PELICULA */
 .poster {
   border-radius: 5%;
   height: 100%;
   width: 100%;
 }
 
-.card :hover {
-  transform: scale(110%);
-  transition: 0.3s;
-  cursor: pointer;
+/* CONTENEDOR DEL RATING */
+.rating {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  bottom: 90%;
+  left: 85%;
+  background-color: white;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0rem 0rem 0.3rem black;
+  font-size: small;
+}
+
+/* PORCENTAJE DEL RATING */
+.percent{
+  color: black;
+  font-weight: bold;
+}
+
+/* CLASIFICACION */
+.good{
+  border: solid green;
+}
+
+.regular{
+  border: solid yellow;
+}
+
+.bad{
+  border: solid red;
 }

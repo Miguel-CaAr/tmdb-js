@@ -23,12 +23,26 @@ export function displayMovies(movies, contenedor) {
     const rating = document.createElement("div");
     const percent = document.createElement("span");
     rating.className = "rating"; //contenedor
-    percent.className = "percent"; //numero
+    percent.className = "percent";
     percent.innerHTML = `${(movie.vote_average * 10).toFixed(0)}%`; //.toFixed() metodo para formatear un numero con una cantidad de digitos decimales y redondea
 
     rating.appendChild(percent);
     card.appendChild(rating);
     card.appendChild(poster);
     container.appendChild(card);
+
+    //Clasificacion
+    classify(rating ,movie.vote_average)
   });
+}
+
+function classify(rating, percent) {
+  // Condicional para cambiar color en base al rating
+  if (percent >= 8) {
+    rating.classList.add("good"); //buena
+  } else if (percent >= 6 && percent< 8) {
+    rating.classList.add("regular"); //regular
+  } else if (percent < 6 && percent != 0 ){
+    rating.classList.add("bad"); //mala
+  }
 }
