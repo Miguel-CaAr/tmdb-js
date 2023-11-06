@@ -1,5 +1,5 @@
-export function moviesDetails() {
-  const body = document.querySelector("body");
+export function moviesDetails(movies) {
+  const pagina = document.querySelector("body");
   //Fondo oscuro
   const backgroundModal = document.createElement("div");
   backgroundModal.className = "backgroundModal";
@@ -7,23 +7,32 @@ export function moviesDetails() {
   const modal = document.createElement("div");
   modal.className = "modal";
   //Boton para cerrar
-  const close = document.createElement("button");
-  close.className = "btnCloseModal";
-  close.innerHTML = "x";
+  const btnClose = document.createElement("button");
+  btnClose.className = "btnCloseModal";
+  btnClose.innerHTML = "x";
 
-  modal.appendChild(close);
+  modal.appendChild(btnClose);
   backgroundModal.appendChild(modal);
-  body.appendChild(backgroundModal);
+  pagina.appendChild(backgroundModal);
 
-  cerrarModal(close, backgroundModal, modal);
-  abrirModal(backgroundModal);
+  closeModal(btnClose, backgroundModal);
+  openModal(movies, backgroundModal);
 }
 
-function abrirModal(modal) {
+function openModal(movies, modal) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.addEventListener("click", () =>{
+      modal.style.display = "block";
+    })
+  });
 }
 
-function cerrarModal(botonCerrar, modal) {
-  botonCerrar.addEventListener("click", () => {
-    modal.style.display = "none";
+function closeModal(btnClose, backgroundModal) {
+  btnClose.addEventListener("click", () => {
+    backgroundModal.style.display = "none";
+  });
+  backgroundModal.addEventListener("click", () => {
+    backgroundModal.style.display = "none";
   });
 }

@@ -5,9 +5,9 @@ import { posterMovie } from "./poster.js";
  * @param {object} movies JSON.
  * @param {string} contenedor Clase del elemento html, para renderizar peliculas dentro.
  */
-export function displayMovies(movies, contenedor) {
+export function displayMovies(movies, containerHTML) {
   movies.forEach((movie) => {
-    const container = document.querySelector(contenedor); //Aqui recibe por ejemplo la lista `.premiereMovies`.
+    const container = document.querySelector(containerHTML); //Aqui recibe por ejemplo la lista `.premiereMovies`.
 
     //Se crea un item para la lista "container".
     const card = document.createElement("li");
