@@ -91,6 +91,7 @@
       transition: 0.5s;
     }
     .btnSearch {
+      background-color: white;
       width: 20%;
       right: 0%;
       height: 60%;
