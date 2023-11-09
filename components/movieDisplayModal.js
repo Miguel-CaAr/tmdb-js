@@ -1,16 +1,22 @@
 import { posterMovie } from "./poster.js";
 
-export function movieDisplayModal(modal, backgroundModal, title, movies) {
+export function movieDisplayModal(
+  modal,
+  backgroundModal,
+  title,
+  movies,
+  containerModal
+) {
   //Disposicion del modal
 
   movies.forEach((element) => {
     if (element.title.includes(title)) {
-      buildDisplay(element, modal, backgroundModal);
+      buildDisplay(element, modal, backgroundModal, containerModal);
     }
   });
 }
 
-function buildDisplay(element, modal, backgroundModal) {
+function buildDisplay(element, modal, backgroundModal, containerModal) {
   //Primero se limpia el modal
   modal.innerHTML = "";
   //Layout del modal
@@ -45,7 +51,7 @@ function buildDisplay(element, modal, backgroundModal) {
   movieDescription.innerHTML = element.overview;
   bodyModal.appendChild(movieDescription);
 
-  closeModal(btnClose, backgroundModal);
+  closeModal(btnClose, backgroundModal, containerModal);
 
   optionsModal(footerModal, element);
 
@@ -55,13 +61,13 @@ function buildDisplay(element, modal, backgroundModal) {
   modal.appendChild(footerModal);
 }
 
-function closeModal(btnClose, backgroundModal) {
+function closeModal(btnClose, backgroundModal, containerModal) {
   btnClose.addEventListener("click", () => {
-    backgroundModal.style.display = "none";
+    containerModal.style.display = "none";
   });
   //Si presiona el boton ↑, si presiona el fondo ↓
   backgroundModal.addEventListener("click", () => {
-    backgroundModal.style.display = "none";
+    containerModal.style.display = "none";
   });
 }
 
