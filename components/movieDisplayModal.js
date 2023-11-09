@@ -1,5 +1,12 @@
 import { posterMovie } from "./poster.js";
-
+/**
+ * Hace un layout y renderiza los detalles de la pelicula dentro del layout
+ * @param {element} modal Elemento HTML
+ * @param {element} backgroundModal Elemento HTML
+ * @param {string} title Titulo de la pelicula que se clico
+ * @param {object} movies Elemento HTML
+ * @param {element} containerModal Elemento HTML
+ */
 export function movieDisplayModal(
   modal,
   backgroundModal,
@@ -10,12 +17,20 @@ export function movieDisplayModal(
   //Disposicion del modal
 
   movies.forEach((element) => {
+    //Recorre todas las peliculas para realizar una evaluacion
     if (element.title.includes(title)) {
+      //Si alguna de las peliculas contiene el titulo de la pelicula cliclada entonces renderiza
       buildDisplay(element, modal, backgroundModal, containerModal);
     }
   });
 }
-
+/**
+ * Crea el layout y pone los detalles de la peliucula dentro
+ * @param {object} element Pelicula
+ * @param {element} modal Elemento HTML
+ * @param {element} backgroundModal Elemento HTML
+ * @param {element} containerModal Elemento HTML
+ */
 function buildDisplay(element, modal, backgroundModal, containerModal) {
   //Primero se limpia el modal
   modal.innerHTML = "";
@@ -60,17 +75,26 @@ function buildDisplay(element, modal, backgroundModal, containerModal) {
   modal.appendChild(bodyModal);
   modal.appendChild(footerModal);
 }
-
+/**
+ * Cierra el modal
+ * @param {element} btnClose Elemento HTML
+ * @param {element} backgroundModal Elemento HTML
+ * @param {element} containerModal Elemento HTML
+ */
 function closeModal(btnClose, backgroundModal, containerModal) {
   btnClose.addEventListener("click", () => {
-    containerModal.style.display = "none";
+    containerModal.remove();
   });
   //Si presiona el boton ↑, si presiona el fondo ↓
   backgroundModal.addEventListener("click", () => {
-    containerModal.style.display = "none";
+    containerModal.remove();
   });
 }
-
+/**
+ * Crea un boton desplegable de opciones flotante en la parte inferior derecha
+ * @param {element} footerModal Elemento HTML
+ * @param {object} movie JSON peliculas
+ */
 function optionsModal(footerModal, movie) {
   const btnSeeLater = document.createElement("button");
   btnSeeLater.innerHTML = "📅 Ver despues";
