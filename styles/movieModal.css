@@ -1,0 +1,126 @@
+.backgroundModal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.623);
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  background-color: white;
+}
+
+.btnCloseModal {
+  position: absolute;
+  z-index: 10;
+  bottom: 92%;
+  right: 1%;
+  border: none;
+  background-color: transparent;
+  font-size: medium;
+}
+
+.btnCloseModal:hover {
+  transform: scale(110%);
+  transition: 0.2s;
+}
+
+/* DETALLES DE LA PELICULA */
+
+/* layout */
+.headerModal {
+  text-align: center;
+}
+
+.bodyModal {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-height: 400px;
+  min-width: 200px;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+}
+
+.footerModal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 100px;
+  min-height: 50px;
+  margin: 0;
+}
+
+@media (width < 490px) {
+  .bodyModal {
+    padding: 0rem 0.5rem;
+    transition: 0.5s;
+  }
+}
+
+/* DETALLES */
+.movieTitle {
+  margin: 0;
+  padding: 1rem;
+}
+
+.moviePoster {
+  border-radius: 10px;
+  margin: 0;
+  max-height: 300px;
+  min-height: 100px;
+  max-width: 300px;
+  min-width: 150px;
+  overflow: scroll;
+}
+
+.movieDescription {
+  margin: 0;
+  max-height: 300px;
+  min-height: 100px;
+  max-width: 200px;
+  min-width: 100px;
+  overflow: scroll;
+}
+
+@media (width < 490px) {
+  .moviePoster {
+    max-height: 300px;
+    min-height: 100px;
+    max-width: 200px;
+    min-width: 100px;
+  }
+  .movieDescription {
+    max-height: 200px;
+    max-width: 150px;
+    min-width: 100px;
+  }
+}
+
+/* OPTIONS MODAL */
+
+.btnSeeLater {
+  border-radius: 0 0 0 25px;
+  color: white;
+  font-size: large;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+}
+
+.aunNoSe {
+  border-radius: 0 0 25px 0;
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+}

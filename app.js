@@ -1,7 +1,8 @@
 import { api } from "./data/api.js";
 import { displayMovies } from "./components/display.js";
 import { search } from "./components/search.js";
-import { moviesDetails } from "./components/moviesDetails.js";
+import { moviesModal } from "./components/moviesModal.js";
+import { options } from "./components/options.js";
 /**
  * Obtiene el JSON y renderiza las peliculas.
  */
@@ -18,7 +19,10 @@ async function App() {
   search(movies); //Buscador en el contenedor HTML
 
   //DETALLES DE LA PELICULA
-  moviesDetails(movies);
+  moviesModal(movies);
+
+  //BOTON OPTIONS
+  options();
 }
 
 App();
