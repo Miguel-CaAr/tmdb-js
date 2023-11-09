@@ -27,6 +27,7 @@
   border: none;
   box-shadow: 0rem 0rem 1rem black;
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .btnFav {
@@ -48,17 +49,15 @@
   transition: 0.5s;
 }
 
-.options:hover {
-  transform: scale(105%);
-  transition: 0.5s;
-}
-.containerOptions:hover .options{
+.optionsOpen {
   transform: rotate(135deg);
+  background-color: gray;
 }
-.containerOptions:hover .btnFav {
+.btnFavCollapsed {
   width: 9.5rem;
   height: 2.5rem;
   top: 18%;
   border-radius: 25px 25px;
   font-size: large;
+  cursor: pointer;
 }
