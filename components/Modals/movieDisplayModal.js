@@ -1,4 +1,4 @@
-import { posterMovie } from "./poster.js";
+import { posterMovie } from "../poster.js";
 /**
  * Hace un layout y renderiza los detalles de la pelicula dentro del layout
  * @param {element} modal Elemento HTML
@@ -15,7 +15,6 @@ export function movieDisplayModal(
   containerModal
 ) {
   //Disposicion del modal
-
   movies.forEach((element) => {
     //Recorre todas las peliculas para realizar una evaluacion
     if (element.title.includes(title)) {
@@ -43,13 +42,11 @@ function buildDisplay(element, modal, backgroundModal, containerModal) {
 
   const footerModal = document.createElement("div");
   footerModal.className = "footerModal";
-
   //Boton para cerrar
   const btnClose = document.createElement("button");
   btnClose.className = "btnCloseModal";
   btnClose.innerHTML = "❌";
   headerModal.appendChild(btnClose);
-
   //Agrega los elementos HTML con datos de la pelicula en layout
   const movieTitle = document.createElement("h1");
   movieTitle.className = "movieTitle";
@@ -65,11 +62,9 @@ function buildDisplay(element, modal, backgroundModal, containerModal) {
   movieDescription.className = "movieDescription";
   movieDescription.innerHTML = element.overview;
   bodyModal.appendChild(movieDescription);
-
+  //Botoness
   closeModal(btnClose, backgroundModal, containerModal);
-
   optionsModal(footerModal, element);
-
   //Agrega layout al modal
   modal.appendChild(headerModal);
   modal.appendChild(bodyModal);

@@ -19,7 +19,7 @@ export function moviesModal(movies) {
  * @param {Object} movies JSON de las peliculas
  */
 function renderModal(cardMovie, movies) {
-  const pagina = document.querySelector("body");
+  const pagina = document.querySelector("main");
   const containerModal = document.createElement("div");
   containerModal.className = "containerModal";
   pagina.appendChild(containerModal);

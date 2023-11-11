@@ -1,13 +1,13 @@
 export function options() {
   const options = document.querySelector(".options");
-  const seeLater = document.querySelector(".seeLater");
+  const watchList = document.querySelector(".watchList");
   options.addEventListener("click", () => {
     if (options.classList.contains("optionsOpen")) {
       options.classList.remove("optionsOpen");
-      seeLater.classList.remove("seeLaterCollapsed");
+      watchList.classList.remove("watchListCollapsed");
     } else {
       options.classList.add("optionsOpen");
-      seeLater.classList.add("seeLaterCollapsed");
+      watchList.classList.add("watchListCollapsed");
     }
   });
 }

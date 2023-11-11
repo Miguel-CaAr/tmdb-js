@@ -1,8 +1,9 @@
 import { api } from "./data/api.js";
 import { displayMovies } from "./components/display.js";
 import { search } from "./components/search.js";
-import { moviesModal } from "./components/moviesModal.js";
+import { moviesModal } from "./components/Modals/moviesModal.js";
 import { options } from "./components/options.js";
+import { watchListModal } from "./components/Modals/watchlistModal.js";
 /**
  * Obtiene el JSON y renderiza las peliculas.
  */
@@ -23,6 +24,9 @@ async function App() {
 
   //BOTON OPTIONS
   options();
+
+  //BOTON PARA ABIR MODAL DE "VER MAS TARDE"
+  watchListModal();
 }
 
 App();
