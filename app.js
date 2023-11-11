@@ -14,17 +14,13 @@ async function App() {
   //PELICULAS ESTRENO
   const upcomingMovies = await api("upcoming");
   displayMovies(upcomingMovies.results, ".upcomingMovies");
-
   //BUSCADOR
   const movies = premiereMovies.results.concat(upcomingMovies.results); //Concatenamos los arreglos de los objetos (.results es la propiedad array)
   search(movies); //Buscador en el contenedor HTML
-
   //DETALLES DE LA PELICULA
   moviesModal(movies);
-
   //BOTON OPTIONS
   options();
-
   //BOTON PARA ABIR MODAL DE "VER MAS TARDE"
   watchListModal();
 }

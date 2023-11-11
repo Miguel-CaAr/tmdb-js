@@ -1,4 +1,6 @@
 import { posterMovie } from "../poster.js";
+import { optionsModal } from "./optionsModalMovie.js";
+import { closeModal } from "./closeModal.js";
 /**
  * Hace un layout y renderiza los detalles de la pelicula dentro del layout
  * @param {element} modal Elemento HTML
@@ -69,35 +71,4 @@ function buildDisplay(element, modal, backgroundModal, containerModal) {
   modal.appendChild(headerModal);
   modal.appendChild(bodyModal);
   modal.appendChild(footerModal);
-}
-/**
- * Cierra el modal
- * @param {element} btnClose Elemento HTML
- * @param {element} backgroundModal Elemento HTML
- * @param {element} containerModal Elemento HTML
- */
-function closeModal(btnClose, backgroundModal, containerModal) {
-  btnClose.addEventListener("click", () => {
-    containerModal.remove();
-  });
-  //Si presiona el boton ↑, si presiona el fondo ↓
-  backgroundModal.addEventListener("click", () => {
-    containerModal.remove();
-  });
-}
-/**
- * Crea un boton desplegable de opciones flotante en la parte inferior derecha
- * @param {element} footerModal Elemento HTML
- * @param {object} movie JSON peliculas
- */
-function optionsModal(footerModal, movie) {
-  const btnSeeLater = document.createElement("button");
-  btnSeeLater.innerHTML = "📅 Ver despues";
-  btnSeeLater.className = "btnSeeLater";
-  footerModal.appendChild(btnSeeLater);
-
-  //Aun no se que hara quiza ver video en yt
-  const aunNoSe = document.createElement("button");
-  aunNoSe.className = "aunNoSe";
-  footerModal.appendChild(aunNoSe);
 }
