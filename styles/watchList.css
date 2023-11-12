@@ -7,11 +7,10 @@
   gap: 0.5rem;
   overflow: auto;
   max-height: 70vh;
-  padding-bottom: ;
 }
 
 .watchListTitle {
-  padding: 0rem;
+  padding: 1rem;
   margin: 0.5;
 }
 
