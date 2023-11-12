@@ -25,7 +25,7 @@ export function displayMovies(movies, containerHTML) {
     const rating = document.createElement("div");
     rating.className = "rating"; //contenedor
     card.appendChild(rating);
-    
+
     //Se agrega el porcentaje de rating al rating
     const percent = document.createElement("span");
     percent.className = "percent";
@@ -36,7 +36,11 @@ export function displayMovies(movies, containerHTML) {
     classify(rating, movie.vote_average);
   });
 }
-
+/**
+ * Clasifica por color el elemento html que contiene el porcentaje en base al rating
+ * @param {Element} rating Elemento html que contiene el porcentaje del rating (HTML)
+ * @param {number} percent Numero flotanto que representa el rating
+ */
 function classify(rating, percent) {
   // Condicional para cambiar color en base al rating
   if (percent >= 8) {
