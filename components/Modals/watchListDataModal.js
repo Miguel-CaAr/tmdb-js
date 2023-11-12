@@ -17,12 +17,20 @@ export function watchListDataModal(modal, backgroundModal, containerModal) {
 
   closeModal(btnClose, backgroundModal, containerModal);
 
-  //Peliculas añadidas a la lista de "ver despues"
   const title = document.createElement("h2");
   title.classList.add("watchListTitle");
   title.innerHTML = "PELICULAS PARA VER DESPUES";
   headerModal.appendChild(title);
 
+  //Renderiza las peliculas que se añadieron
+  renderMovies(bodyModal);
+
+  //Agrega layout al modal
+  modal.appendChild(headerModal);
+  modal.appendChild(bodyModal);
+}
+
+function renderMovies(bodyModal) {
   const movies = Object.keys(localStorage);
   movies.forEach((movie) => {
     const posterPath = localStorage.getItem(movie);
@@ -42,10 +50,6 @@ export function watchListDataModal(modal, backgroundModal, containerModal) {
 
     deleteMovie(btnDelete, card);
   });
-
-  //Agrega layout al modal
-  modal.appendChild(headerModal);
-  modal.appendChild(bodyModal);
 }
 
 function deleteMovie(button, card) {
@@ -54,7 +58,6 @@ function deleteMovie(button, card) {
     localStorage.removeItem(card.id);
     watchListEmpty(); //Cerrar modal si no hay pelis para ver despues
   });
-
 }
 
 function watchListEmpty() {
