@@ -14,8 +14,27 @@
   padding: 0rem;
   margin: 0.5;
 }
+
+.cardSeeLater {
+  position: relative;
+}
+
 .posterWatchList {
   width: 160;
   height: 244px;
   border-radius: 5%;
+}
+
+.btnDelete {
+  position: absolute;
+  z-index: 10;
+  top: 0.5rem;
+  right: 0.5rem;
+  filter: drop-shadow(0rem 0.1rem 0.3rem red);
+  font-size: larger;
+  cursor: pointer;
+}
+
+.btnDelete:hover{
+  transform: scale(115%);
 }

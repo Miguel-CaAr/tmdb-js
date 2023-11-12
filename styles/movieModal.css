@@ -25,9 +25,9 @@
   }
 }
 
-@media (width < 444px){
+@media (width < 471px){
   .modal{
-    min-width: 98%;
+    min-width: 99%;
     transition: 0.5s;
   }
 }

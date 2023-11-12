@@ -25,14 +25,42 @@ export function watchListDataModal(modal, backgroundModal, containerModal) {
 
   const movies = Object.keys(localStorage);
   movies.forEach((movie) => {
-    const poster = localStorage.getItem(movie);
-    const card = document.createElement("img");
-    card.classList = "posterWatchList";
-    card.src = posterMovie(poster);
+    const posterPath = localStorage.getItem(movie);
+    const card = document.createElement("div");
+    card.id = movie;
+    card.classList.add("cardSeeLater");
+    const img = document.createElement("img");
+    img.classList = "posterWatchList";
+    img.src = posterMovie(posterPath);
+    card.appendChild(img);
     bodyModal.appendChild(card);
+
+    const btnDelete = document.createElement("span");
+    btnDelete.classList.add("btnDelete");
+    btnDelete.innerHTML = "⛔";
+    card.appendChild(btnDelete);
+
+    deleteMovie(btnDelete, card);
   });
 
   //Agrega layout al modal
   modal.appendChild(headerModal);
   modal.appendChild(bodyModal);
+}
+
+function deleteMovie(button, card) {
+  button.addEventListener("click", () => {
+    card.remove();
+    localStorage.removeItem(card.id);
+    watchListEmpty(); //Cerrar modal si no hay pelis para ver despues
+  });
+
+}
+
+function watchListEmpty() {
+  const watchlist = document.querySelector(".containerModal");
+  if (localStorage.length === 0) {
+    watchlist.remove();
+    console.log("borrado crak");
+  }
 }
