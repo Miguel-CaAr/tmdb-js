@@ -9,7 +9,13 @@ export function watchListModal() {
 
 function renderModal() {
   if (localStorage.length === 0) {
-    console.log("No hay pelis compa");
+    const watchList = document.querySelector(".watchList");
+    watchList.innerHTML = "🤷‍♂️ Lista vacia"
+    watchList.classList.add('watchListEmpty')
+    setTimeout(()=>{
+      watchList.innerHTML = "📅 Ver despues"
+      watchList.classList.remove('watchListEmpty')
+    }, 1000)
   } else {
     const pagina = document.querySelector("main");
     const containerModal = document.createElement("div");

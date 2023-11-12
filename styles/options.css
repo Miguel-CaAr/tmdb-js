@@ -61,3 +61,27 @@
   font-size: large;
   cursor: pointer;
 }
+
+.watchListEmpty {
+  background-color: red;
+  transition: 0.5;
+  animation: shake 0.5s ease-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-5px, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  75% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

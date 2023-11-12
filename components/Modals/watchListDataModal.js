@@ -61,6 +61,5 @@ function watchListEmpty() {
   const watchlist = document.querySelector(".containerModal");
   if (localStorage.length === 0) {
     watchlist.remove();
-    console.log("borrado crak");
   }
 }
