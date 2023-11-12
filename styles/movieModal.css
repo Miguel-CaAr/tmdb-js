@@ -18,15 +18,15 @@
   transition: 0.5s;
 }
 
-@media (width < 709px){
-  .modal{
+@media (width < 709px) {
+  .modal {
     min-width: 80%;
     transition: 0.5s;
   }
 }
 
-@media (width < 471px){
-  .modal{
+@media (width < 471px) {
+  .modal {
     min-width: 99%;
     transition: 0.5s;
   }
@@ -128,9 +128,19 @@
   border-radius: 0 0 0 25px;
   color: white;
   font-size: large;
+  background-color: #0b91b3;
+  border: none;
+  cursor: pointer;
+}
+
+.btnSeeLaterAdded {
+  border-radius: 0 0 0 25px;
+  color: white;
+  font-size: large;
   background-color: green;
   border: none;
   cursor: pointer;
+  transition: 1s;
 }
 
 .aunNoSe {
