@@ -1,4 +1,5 @@
 import { movieDisplayModal } from "./movieDisplayModal.js";
+import { notScroll } from "../notScroll.js";
 
 /**
  * Al clicar la tarjeta de la prelicula, crea un modal con detalles
@@ -40,4 +41,7 @@ function renderModal(cardMovie, movies) {
     movies,
     containerModal
   );
+
+  //Bloquear scroll del fondo
+  notScroll(true);
 }

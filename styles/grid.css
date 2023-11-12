@@ -31,3 +31,7 @@ body {
   background-color: #032541;
   box-shadow: 0px 0.2rem 0.8rem rgba(0, 0, 0, 0.6);
 }
+/* Clase para bloquear scroll del fondo al abrir un modal */
+.notScroll {
+  overflow: hidden;
+}
