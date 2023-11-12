@@ -1,0 +1,21 @@
+.bodyWatchList {
+  display: flex;
+  direction: ltr;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+  overflow: auto;
+  max-height: 70vh;
+  padding-bottom: ;
+}
+
+.watchListTitle {
+  padding: 0rem;
+  margin: 0.5;
+}
+.posterWatchList {
+  width: 160;
+  height: 244px;
+  border-radius: 5%;
+}
