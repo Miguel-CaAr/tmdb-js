@@ -3,7 +3,7 @@
   "short_name": "TMDB",
   "start_url": "/",
   "display": "fullscreen",
-  "theme_color": "#ffffff",
+  "theme_color": "#032541",
   "background_color": "#ffffff",
   "icons": [
     {
