@@ -1,0 +1,15 @@
+{
+  "name": "The Movie DataBase",
+  "short_name": "TMDB",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/assets/logoTMDB.png",
+      "sizes": "512 × 512",
+      "type": "image/png"
+    }
+  ]
+}
