@@ -4,7 +4,7 @@
   "start_url": "/",
   "display": "fullscreen",
   "theme_color": "#032541",
-  "background_color": "#ffffff",
+  "background_color": "#032541",
   "icons": [
     {
       "src": "/assets/logoTMDB.png",
